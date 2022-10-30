@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --col-enfasis: #1e0e62;
+  --col-base: rgba(21, 20, 57, 0.4);
+  --col-gris: #ebeaed;
+  --col-gris1: #f1f1f1;
+  --col-gris4: #464646;
+  --col-secundario: #25dac5;
+  --col-blanco: rgb(255, 255, 255);
+
+  --font-ppal: "DM Sans", sans-serif;
+}
+body {
+  font-family: var(--font-ppal);
+  color: var(--col-base);
+  font-size: 22px;
+}
+h1,
+h2,
+h3,
+h4,
+.titulo,
+.card-titulo {
+  color: var(--col-enfasis);
+}
+hr {
+  margin: 0px auto;
+  width: 80%;
+}
+
+.boton {
+  padding: 10px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+.titulo {
+  font-size: 24px;
+  font-weight: 700;
+}
+.subtitulo {
+  padding: 20px 0px;
+}
+
+/* header */
+header {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn-email {
+  background-color: var(--col-blanco);
+  border: 2px solid var(--col-gris);
+}
+
+.btn-github {
+  background-color: var(--col-secundario);
+  border: 2px solid var(--col-blanco);
+  color: var(--col-blanco);
+  margin: auto;
+  
+}
+/* main */
+
+main {
+  background-color: var(--col-gris1);
+  padding: 100px 30px;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+img {
+  border-radius: 20px;
+}
+
+.sobre-mi .titulo {
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 43px;
+}
+.sobre-mi__imagen {
+  margin: auto;
+}
+/*  */
+.habilidades,
+.experiencia {
+  padding: 30px 30px;
+}
+.habilidades {
+  background-color: var(--col-gris1);
+}
+.habilidades .titulo {
+  margin-top: 5rem;
+}
+
+.experiencia{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-cards {
+  padding: 2rem 0px;
+  gap: 2rem;
+}
+.card{
+  margin: 2rem 0px;
+}
+
+.card-titulo {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-descripcion {
+  font-size: 16px;
+}
+
+.card-imagen {
+  width: 330px;
+  height: 200px;
+  display: flex;
+  margin: auto;
+}
+/* footer */
+footer {
+  background-color: var(--col-gris1);
+  text-align: center;
+  padding: 30px 0px;
+}
+footer p {
+  color: var(--col-enfasis);
+}
+.social {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.social-icon {
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.social-icon:hover {
+  background-color: #25dac5;
+}
+
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .sobre-mi {
+    width: 50%;
+  }
+  .sobre-mi__imagen {
+    margin: 0px 2rem;
+  }
+  .habilidades,
+  .experiencia {
+    text-align: center;
+  }
+  .habilidades .contenedor-cards {
+    display: flex;    
+  }
+  .experiencia .contenedor-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+
+  }
+}
+@media (min-width: 1080px) {
+  .experiencia .contenedor-cards {    
+    grid-template-columns: auto auto auto;
+
+  }
+}
